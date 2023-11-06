@@ -18,10 +18,5 @@ namespace ClassLibrary
             NumberGroop = numberGroop;
             CountBook = countBook;
         }
-        public string ToString()
-        {
-            string result = $"ФИО: {FIO}, Номер группы: {NumberGroop}, Количество книг: {CountBook}";
-            return result;
-        }
     }
 }

@@ -1,4 +1,7 @@
-﻿namespace ClassLibrary
+﻿using System;
+using static System.Reflection.Metadata.BlobBuilder;
+
+namespace ClassLibrary
 {
     public class Book
     {
@@ -16,10 +19,29 @@
             Year = year;
             Count = count;
         }
-        public string ToString()
+        public Book() { }
+
+        public void ShowGroup()
         {
-            string result = $"Артикул: {Article}, Автор: {Author}, Название: {Name}\nГод издания: {Year}, Количество {Count}";
-            return result;
+            Console.WriteLine();
+            Console.WriteLine($"Артикул: {Article}");
+            Console.WriteLine($"Автор: {Author}");
+            Console.WriteLine($"Название: {Name}");
+            Console.WriteLine($"Год издания: {Year}");
+            Console.WriteLine($"Количество {Count}");
+        }
+
+        public void AddBook()
+        {
+            List<Book> books = new List<Book>()
+            {
+                new Book("111", "111", "111", 1, 1),
+                new Book("222", "222", "222", 2, 2),
+                new Book("333", "333", "333", 3, 3)
+            };
+
+            Book book = new Book();
+            books.Add(book);
         }
 
     }
