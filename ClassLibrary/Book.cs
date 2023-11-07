@@ -21,27 +21,15 @@ namespace ClassLibrary
         }
         public Book() { }
 
-        public void ShowGroup()
+        /// <summary>
+        /// переопределение метода ToString()
+        /// </summary>
+        /// <returns>строка: артикул, автор, название, год издания количество, экземпляров</returns>
+        public override string ToString()
         {
-            Console.WriteLine();
-            Console.WriteLine($"Артикул: {Article}");
-            Console.WriteLine($"Автор: {Author}");
-            Console.WriteLine($"Название: {Name}");
-            Console.WriteLine($"Год издания: {Year}");
-            Console.WriteLine($"Количество {Count}");
-        }
-
-        public void AddBook()
-        {
-            List<Book> books = new List<Book>()
-            {
-                new Book("111", "111", "111", 1, 1),
-                new Book("222", "222", "222", 2, 2),
-                new Book("333", "333", "333", 3, 3)
-            };
-
-            Book book = new Book();
-            books.Add(book);
+            return $"Артикул: {Article}\nАвтор: {Author}\n" +
+                $"Название: {Name}\nГод издания: {Year}\n" +
+                $"Количество копий: {Count}\n";
         }
 
     }

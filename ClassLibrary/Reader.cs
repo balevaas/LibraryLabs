@@ -12,11 +12,13 @@ namespace ClassLibrary
         public string FIO {  get; set; }
         public int NumberGroop { get; set; }
         public int CountBook { get; set; }
+        public List<Book> books { get; set; }
         public Reader(string fio, int numberGroop, int countBook)
         {
             FIO = fio;
             NumberGroop = numberGroop;
             CountBook = countBook;
+            books = new List<Book>();
         }
     }
 }
